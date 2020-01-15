@@ -665,7 +665,7 @@ void post_fs_data(int client) {
 	prepare_modules();
 
 	// Core only mode
-	if (access(DISABLEFILE, F_OK) == 0)
+	if (access(DISABLEFILE, F_OK) != 0)
 		core_only();
 
 	collect_modules();
